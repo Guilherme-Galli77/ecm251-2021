@@ -3,7 +3,7 @@ Repositório criado para gerenciar os projetos e aulas de linguagens 1
 
 # Desenvolvedor:
 
-## Guilherme Cury Galli
+- Guilherme Cury Galli
 
 # Principais Linguagens:
 - Python
