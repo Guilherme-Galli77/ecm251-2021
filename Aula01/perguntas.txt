@@ -1,0 +1,11 @@
+1-Em qual pasta o jdk do java está instalado?
+2-Qual o caminho completoat é os executáveis javac e java,que foram instalados do computador?
+3-Como compilamos um programa por linha de comando utilizando o javac?
+4-E como executamos este programa?
+5-O que são variáveis do ambiente?Para que elas servem?
+6-Qualquer um pode criar uma variável de ambiente?
+7-Como eu crio uma variável de ambiente no Windows/Linux?
+8-O que é JAVA_HOME? Por que preciso dele?
+
+Respostas:
+1- Esta instalado no :/C na pasta program files
