@@ -1,13 +1,19 @@
 package galli.guilherme;
 
 public class Cliente {
-    String titular;
-    String cpf;
+    public Cliente(String nome){
+        this.nome = nome;
+    }
+
+    private String nome;
+    private String sobrenome;
+    private String cpf;
 
     @Override
     public String toString() {
         return "Cliente{" +
-                "titular='" + titular + '\'' +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
                 ", cpf='" + cpf + '\'' +
                 '}';
     }
