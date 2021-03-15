@@ -6,8 +6,7 @@ public class Conta {
     private double saldo;
     private int numero;
 
-    //Construtor da classe
-    public Conta(String nome, double saldoInicial, int numero){
+    public Conta(String nome, double saldoInicial, int numero) {
         this.saldo = saldoInicial;
         this.numero = numero;
         this.cliente = new Cliente(nome);
@@ -20,7 +19,7 @@ public class Conta {
     }
 
     public boolean sacar(double valor) {
-        if(valor <= this.saldo){
+        if (valor <= this.saldo) {
             this.saldo -= valor;
             return true;
         }
@@ -28,7 +27,7 @@ public class Conta {
     }
 
     public boolean transferirDinheiro(Conta destino, double valor) {
-        if(this.sacar(valor)){
+        if (this.sacar(valor)) {
             destino.depositar(valor);
             return true;
         }

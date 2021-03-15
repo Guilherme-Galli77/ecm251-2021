@@ -1,7 +1,6 @@
 package galli.guilherme;
 
 import java.time.LocalDate;
-
 import static java.time.temporal.ChronoUnit.DAYS;
 
 public class Titulo {
@@ -14,7 +13,7 @@ public class Titulo {
     public Titulo(double valor, String descricao, String dataDeVencimento, double jurosAoDia) {
         this.valor = valor;
         this.descricao = descricao;
-        this.dataDeVencimento = dataDeVencimento;
+        this.dataDeVencimento = LocalDate.parse(dataDeVencimento);
         this.jurosAoDia = jurosAoDia;
     }
 
@@ -25,6 +24,7 @@ public class Titulo {
             return calcularJuros();
         }
     }
+
     private double calcularJuros(){
         return this.valor + this.valor * this.jurosAoDia * dataDeVencimento.until(LocalDate.now(), DAYS);
     }
