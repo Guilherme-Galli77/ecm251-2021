@@ -26,6 +26,32 @@ public class Sistema {
             case 1:
                 System.out.println("Saldo Atual: R$" + this.conta.getSaldo());
                 break;
+            case 2:
+                System.out.println("Qual quantia de dinheiro?");
+                double quantiaParaSacar = scanner.nextDouble();
+                if(this.conta.sacar(quantiaParaSacar)){
+                    System.out.println("Operação Realizada com Sucesso!");
+                } else {
+                    System.out.println("Não foi possivel realizar a operação");
+                }
+                break;
+            case 3:
+                System.out.println("Qual a quantia de dinheiro?");
+                double quantiaParaDepositar = scanner.nextDouble();
+                this.conta.depositar(quantiaParaDepositar);
+                System.out.println("Operação Realizada com Sucesso!");
+                break;
+            case 4:
+                System.out.println("Funcao ainda não implementada!");
+                break;
+            case 5:
+                System.out.println("Nome da Conta:");
+                String nome = scanner.next();
+                System.out.println("Valor da conta:");
+                double valorDaConta = scanner.nextDouble();
+                System.out.println("Juros da conta:");
+                double jurosDaConta = scanner.nextDouble();
+                System.out.println("Informe a data de vencimento");
             default:
                 System.out.println("Essa funcionalidade ainda nao foi implementada!");
         }
