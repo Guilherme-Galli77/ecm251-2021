@@ -1,45 +1,54 @@
 package galli.cury.guilherme;
 
 public class Contas {
-    //Informações de uma conta
+
+    //ATRIBUTOS DE UMA CONTA
+
     private int idConta;
     private double saldo;
+    private static int numContas = 0;
+    private String QRCode;
 
-    public double getSaldo() {
-        return saldo;
+    //CONSTRUTOR
+    public Contas(double saldo) {
+        numContas += 1;
+        this.idConta = numContas;   // o id de cada conta será igual ao "número de criação" da conta
+        this.saldo = saldo;
     }
+
+    //GETTERS
 
     public int getIdConta(){
-        return idConta;
+        return this.idConta;
+    }
+
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    public String getQRCode() {
+        return this.QRCode;
+    }
+
+    //METODOS
+
+
+    public void gravarQRCode(String nome, double valor) {
+        this.QRCode = Transacoes.gerarQRCode(this.idConta, nome, valor);    //Grava o QRCode na conta do usuário
     }
 
 
-    //Métodos
-    public Contas(int idConta, double saldo){
-        this.saldo = saldo;
-        this.idConta = idConta;
+    public static void receber(Contas conta,double valor) {
+        conta.saldo += valor;
     }
 
-
-    public boolean sacar(double valor) {
-        if (this.saldo>=valor) {
-            this.saldo -= valor;
-            return true;
+    public static void pagar(Contas conta,double valor) {
+        if (conta.saldo>=valor) {
+            conta.saldo -= valor;
         }
-        return false;
+        System.out.println("ERRO");
     }
 
-    public void depositar(double valor) {
-        this.saldo += valor;
-    }
-
-    public boolean transferirDinheiro(Contas destino, double valor) {
-        if (this.sacar(valor)){
-            destino.depositar(valor);
-            return true;
-        }
-        return false;
-    }
 
     @Override
     public String toString() {
@@ -50,4 +59,3 @@ public class Contas {
     }
 }
 
-}
