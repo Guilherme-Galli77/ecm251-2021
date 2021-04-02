@@ -5,19 +5,21 @@ public class Contas {
     private int idConta;
     private double saldo;
 
-    //Métodos
-    public Contas(int idConta, double saldo){
-        this.idConta = idConta;
-        this.saldo = saldo;
-    }
-
     public double getSaldo() {
         return saldo;
     }
 
-    public double getIdConta(){
+    public int getIdConta(){
         return idConta;
     }
+
+
+    //Métodos
+    public Contas(int idConta, double saldo){
+        this.saldo = saldo;
+        this.idConta = idConta;
+    }
+
 
     public boolean sacar(double valor) {
         if (this.saldo>=valor) {

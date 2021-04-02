@@ -7,24 +7,32 @@ public class Usuarios {
     private Contas conta;
 
 
+    public String getNome() {
+        return nome;
+    }
 
-
-    public Usuarios(String nome,String senha ,String email, double valor){
-        this.nome = nome;
-        this.senha = senha;
-
+    public Contas getConta() {
+        return conta;
     }
 
     public int getidConta(){
         return this.conta.getIdConta();
     }
 
+    public Usuarios(String nome, String senha , String email, double valor){
+        this.nome = nome;
+        this.senha = senha;
+        this.email = email;
+        this.conta = new Contas(valor);
+    }
+
     @Override
     public String toString() {
-        return "Usuario{" +
+        return "Usuarios{" +
                 "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", cpf='" + cpf + '\'' +
+                ", senha='" + senha + '\'' +
+                ", email='" + email + '\'' +
+                ", conta=" + conta +
                 '}';
     }
 }
