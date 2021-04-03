@@ -2,7 +2,7 @@ package galli.cury.guilherme;
 
 public class Usuarios {
 
-    //INFORMACOES DO USUARIO
+    //Informaçoes do usuário
 
     private String nome;
     private String senha;
@@ -10,7 +10,7 @@ public class Usuarios {
     private Contas conta;
 
 
-    //CONSTRUTOR
+    //Construtor
 
     public Usuarios(String nome, String senha , String email){
         this.nome = nome;
@@ -19,7 +19,7 @@ public class Usuarios {
     }
 
 
-   //GETTERS
+   //Getters
 
     public String getNome() {
         return this.nome;
@@ -38,7 +38,7 @@ public class Usuarios {
     }
 
 
-    // CRIACAO DE UMA CONTA INICIAL
+    // Criação de uma conta inicial
 
     public void criarConta(double saldo){
         this.conta = new Contas(saldo);
@@ -46,7 +46,7 @@ public class Usuarios {
 
 
 
-    //OPERACOES
+    //Operações
 
     public String requisitar(double valor){
         this.conta.gravarQRCode(this.nome, valor);

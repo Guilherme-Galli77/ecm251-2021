@@ -2,20 +2,38 @@
     Guilherme Cury Galli      19.00374-9
  */
 
-
-
 package galli.cury.guilherme;
+
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+
+        String nameUser1, email1;
+        String nameUser2, email2;
+        String nameUser3, email3;
+
+        // Digitação dos nomes dos usuários
+        System.out.println("Digite o nome da primeira conta: ");
+        nameUser1 = input.nextLine();
+        System.out.println("Digite o nome da segunda conta: ");
+        nameUser2 = input.nextLine();
+        System.out.println("Digite o nome da terceira conta: ");
+        nameUser3 = input.nextLine();
+
+        // Email dos usuários
+        email1 = nameUser1.replaceAll(" ","");
+        email2 = nameUser2.replaceAll(" ","");
+        email3 = nameUser3.replaceAll(" ","");
 
         // Criação dos usuários
         System.out.println();       // Pular uma linha
-        Usuarios user1 = new Usuarios("All Might", "123", "allmight@maua.br");
-        Usuarios user2 = new Usuarios("One For All", "456", "oneforall@maua.br");
-        Usuarios user3 = new Usuarios("Bakugo", "789", "bakugo@maua.br");
+        Usuarios user1 = new Usuarios(nameUser1, "123", email1+"@maua.br");
+        Usuarios user2 = new Usuarios(nameUser2, "456", email2+"@maua.br");
+        Usuarios user3 = new Usuarios(nameUser3, "789", email3+"@maua.br");
 
         // Criação das contas
         user1.criarConta(1000.0);
@@ -24,13 +42,13 @@ public class Main {
 
         // Situações bancárias iniciais
         System.out.println("Situação Inicial:");
-        System.out.println(user1.getNome()+": "+user1.getConta().getSaldo()+" R$");
-        System.out.println(user2.getNome()+": "+user2.getConta().getSaldo()+" R$");
-        System.out.println(user3.getNome()+": "+user3.getConta().getSaldo()+" R$");
+        System.out.println("Nome de Usuario: "+user1.getNome()+" - Saldo: "+user1.getConta().getSaldo()+" R$");
+        System.out.println("Nome de Usuario: "+user2.getNome()+" - Saldo: "+user2.getConta().getSaldo()+" R$");
+        System.out.println("Nome de Usuario: "+user3.getNome()+" - Saldo: "+user3.getConta().getSaldo()+" R$");
         System.out.println();
 
         // Operações bancárias
-        user1.requisitar(250);
+        user1.requisitar(2500);
         user2.depositar(user1);
         user3.depositar(user1);
         user2.depositar(user1);
@@ -40,9 +58,9 @@ public class Main {
 
         // Situações bancárias finais
         System.out.println("Situação Final:");
-        System.out.println(user1.getNome() + ": " + user1.getConta().getSaldo() +" R$");
-        System.out.println(user2.getNome() + ": " + user2.getConta().getSaldo() +" R$");
-        System.out.println(user3.getNome() + ": " + user3.getConta().getSaldo() +" R$");
+        System.out.println("Nome de Usuario: "+user1.getNome() + " - Saldo: " + user1.getConta().getSaldo() +" R$");
+        System.out.println("Nome de Usuario: "+user2.getNome() + " - Saldo: " + user2.getConta().getSaldo() +" R$");
+        System.out.println("Nome de Usuario: "+user3.getNome() + " - Saldo: " + user3.getConta().getSaldo() +" R$");
+
     }
 }
-

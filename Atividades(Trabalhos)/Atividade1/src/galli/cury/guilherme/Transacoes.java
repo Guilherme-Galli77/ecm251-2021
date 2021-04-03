@@ -1,10 +1,10 @@
 package galli.cury.guilherme;
 
-//IMPORTACOES
+//Importaçoes
 
 import java.util.Random;
 
-//METODOS
+//Métodos
 
 public class Transacoes {
 

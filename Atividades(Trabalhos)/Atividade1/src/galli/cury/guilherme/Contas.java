@@ -2,21 +2,21 @@ package galli.cury.guilherme;
 
 public class Contas {
 
-    //ATRIBUTOS DE UMA CONTA
+    //Atributos de uma conta
 
     private int idConta;
     private double saldo;
     private static int numContas = 0;
     private String QRCode;
 
-    //CONSTRUTOR
+    //Construtor
     public Contas(double saldo) {
         numContas += 1;
-        this.idConta = numContas;   // o id de cada conta será igual ao "número de criação" da conta
+        this.idConta = numContas;   // OBS: O ID DE CADA CONTA SERA IGUAL AO "NÚMERO DE CRIAÇÃO" DA CONTA
         this.saldo = saldo;
     }
 
-    //GETTERS
+    //Getters
 
     public int getIdConta(){
         return this.idConta;
@@ -30,11 +30,11 @@ public class Contas {
         return this.QRCode;
     }
 
-    //METODOS
+    //Métodos
 
 
     public void gravarQRCode(String nome, double valor) {
-        this.QRCode = Transacoes.gerarQRCode(this.idConta, nome, valor);    //Grava o QRCode na conta do usuário
+        this.QRCode = Transacoes.gerarQRCode(this.idConta, nome, valor);    //GRAVA O QR CODE NA CONTA DO USUÁRIO
     }
 
 
@@ -43,19 +43,16 @@ public class Contas {
     }
 
     public static void pagar(Contas conta,double valor) {
-        if (conta.saldo>=valor) {
             conta.saldo -= valor;
-        }
-        System.out.println("ERRO");
     }
 
 
     @Override
     public String toString() {
-        return "Contas{" +
-                "idConta=" + idConta +
-                ", saldo=" + saldo +
-                '}';
+        return "{" +
+                " idConta='" + getIdConta() + "'" +
+                ", saldo='" + getSaldo() + "'" +
+                ", QRCode='" + getQRCode() + "'" +
+                "}";
     }
 }
-
