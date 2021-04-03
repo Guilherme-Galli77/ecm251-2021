@@ -2,34 +2,32 @@ package galli.cury.guilherme;
 
 public class Usuarios {
 
-    //Informaçoes do usuário
+    //Informações do usuário
 
     private String nome;
     private String senha;
     private String email;
     private Contas conta;
 
-
     //Construtor
 
-    public Usuarios(String nome, String senha , String email){
+    public Usuarios(String nome, String senha, String email){
         this.nome = nome;
         this.senha = senha;
         this.email = email;
     }
 
-
-   //Getters
+    //Getters
 
     public String getNome() {
         return this.nome;
     }
 
-    public String getSenha(){
+    public String getSenha() {
         return this.senha;
     }
 
-    public String getEmail(){
+    public String getEmail() {
         return this.email;
     }
 
@@ -37,14 +35,11 @@ public class Usuarios {
         return this.conta;
     }
 
-
-    // Criação de uma conta inicial
+    // Criação de uma conta inical
 
     public void criarConta(double saldo){
         this.conta = new Contas(saldo);
     }
-
-
 
     //Operações
 
@@ -74,15 +69,14 @@ public class Usuarios {
         }
     }
 
-
-
     @Override
     public String toString() {
-        return "Usuarios{" +
-                "nome='" + nome + '\'' +
-                ", senha='" + senha + '\'' +
-                ", email='" + email + '\'' +
-                ", conta=" + conta +
-                '}';
+        return "{" +
+                " nome='" + getNome() + "'" +
+                ", senha='" + getSenha() + "'" +
+                ", email='" + getEmail() + "'" +
+                ", conta='" + getConta() + "'" +
+                "}";
     }
+
 }

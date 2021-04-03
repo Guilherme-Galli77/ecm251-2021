@@ -4,11 +4,11 @@ package galli.cury.guilherme;
 
 import java.util.Random;
 
-//Métodos
-
 public class Transacoes {
 
-    private static int getRandomNumberInRange(int min, int max) {
+    //Métodos
+
+    private static int getRandomNumberInRange(int min, int max) {  // Gerar número aleatório
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
     }
