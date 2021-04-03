@@ -35,7 +35,7 @@ public class Usuarios {
         return this.conta;
     }
 
-    // Criação de uma conta inical
+    // Criação de uma conta inicial
 
     public void criarConta(double saldo){
         this.conta = new Contas(saldo);

@@ -1,7 +1,5 @@
 package galli.cury.guilherme;
 
-//Importaçoes
-
 import java.util.Random;
 
 public class Transacoes {
