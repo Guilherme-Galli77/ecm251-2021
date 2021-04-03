@@ -19,8 +19,10 @@ public class Main {
         // Digitação dos nomes dos usuários
         System.out.println("Digite o nome da primeira conta: ");
         nameUser1 = input.nextLine();
+
         System.out.println("Digite o nome da segunda conta: ");
         nameUser2 = input.nextLine();
+
         System.out.println("Digite o nome da terceira conta: ");
         nameUser3 = input.nextLine();
 
@@ -42,13 +44,13 @@ public class Main {
 
         // Situações bancárias iniciais
         System.out.println("Situação Inicial:");
-        System.out.println("Nome de Usuario: "+user1.getNome()+" - Saldo: "+user1.getConta().getSaldo()+" R$");
-        System.out.println("Nome de Usuario: "+user2.getNome()+" - Saldo: "+user2.getConta().getSaldo()+" R$");
-        System.out.println("Nome de Usuario: "+user3.getNome()+" - Saldo: "+user3.getConta().getSaldo()+" R$");
+        System.out.println("Nome de usuário: " +user1.getNome()+"- Saldo: "+user1.getConta().getSaldo()+" R$");
+        System.out.println("Nome de usuário: " +user2.getNome()+"- Saldo: "+user2.getConta().getSaldo()+" R$");
+        System.out.println("Nome de usuário: " +user3.getNome()+"- Saldo: "+user3.getConta().getSaldo()+" R$");
         System.out.println();
 
         // Operações bancárias
-        user1.requisitar(2500);
+        user1.requisitar(250);
         user2.depositar(user1);
         user3.depositar(user1);
         user2.depositar(user1);
@@ -58,9 +60,9 @@ public class Main {
 
         // Situações bancárias finais
         System.out.println("Situação Final:");
-        System.out.println("Nome de Usuario: "+user1.getNome() + " - Saldo: " + user1.getConta().getSaldo() +" R$");
-        System.out.println("Nome de Usuario: "+user2.getNome() + " - Saldo: " + user2.getConta().getSaldo() +" R$");
-        System.out.println("Nome de Usuario: "+user3.getNome() + " - Saldo: " + user3.getConta().getSaldo() +" R$");
+        System.out.println("Nome de usuário: " +user1.getNome()+"- Saldo: "+user1.getConta().getSaldo()+" R$");
+        System.out.println("Nome de usuário: " +user2.getNome()+"- Saldo: "+user2.getConta().getSaldo()+" R$");
+        System.out.println("Nome de usuário: " +user3.getNome()+"- Saldo: "+user3.getConta().getSaldo()+" R$");
 
     }
 }
