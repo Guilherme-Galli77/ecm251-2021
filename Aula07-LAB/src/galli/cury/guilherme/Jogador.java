@@ -30,9 +30,4 @@ public class Jogador {
     public void setJogada(Jogada jogada) {
         this.jogada = jogada;
     }
-
-    @Override
-    public String toString() {
-        return getNome();
-    }
 }
