@@ -1,0 +1,11 @@
+=-----------------------------------------------=
+= 1 - Tela de Boa Vindas                        =       //DONE
+= 2 - Menu de Opções com Horario atual          =       //DONE
+= 3 - Cadastrar novos membros                   =       //DONE
+=   3.1 - Escrever e Ler um Arquivo.csv         =       //DONE
+= 5 - Postar Mensagens para todos integrantes   =       //DONE
+= 6 - Mudar Horario                             =       //DONE           
+= 7 - Remover Membros                           =       //DONE
+=   7.1 - Exibir Relatorio                      =       //DONE
+= 9 - Encerrar o Sistema                        =       //DONE
+=-----------------------------------------------=
